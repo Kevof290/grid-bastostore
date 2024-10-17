@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #000;
+}
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+}
+
+section {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 10px ;
+    background-color: #000;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-areas:
+    "nav nav"
+    "aside section"
+    "aside footer";
+    min-height: 100vh;
+    min-width: 100%;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 5% auto 5% ;
+}
+
+nav img {
+    width: 8%;
+    margin: 0 1rem;
+}
+
+img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 1rem .5rem;
+    color: #fff;
+}
+
+.box h2 {
+    padding: 1rem 0 .5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    text-wrap: balance;
+    text-align: center;
+}
+
+.box h2:hover {
+    cursor: pointer;
+}
+
+.box p {
+    font-size: 1.2rem;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    padding: 1rem 2.5rem;
+    margin: 1.5rem .5rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    background-color: #fed344;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #fed344;
+}
+
+tool-tip {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    box-shadow: 0 0 10px #000;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    top: 100%;
+    left: 12.5%;
+    opacity: 0;
+    transition: opacity .3s ease;
+    font-size: 1rem;
+}
+
+:has(> tool-tip) {
+    position: relative;
+}
+
+:has(> tool-tip):hover tool-tip {
+    opacity: 1;
+    color: #000;
+    background-color: #fed344;
+}
+
+aside h3 {
+    padding: 1rem;
+    color: #fff;
+}
+
+aside p {
+    padding: .2rem 1rem;
+    color: #fff;
+}
+
+aside p:hover {
+    color: #fed344;
+    cursor: pointer;
+}
+
+footer i {
+    padding: 0 .3rem;
+}
+
+footer i:hover {
+    color: #fed344;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    padding: 0 .8rem;
+}
+
